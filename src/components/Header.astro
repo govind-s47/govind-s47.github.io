@@ -1,0 +1,112 @@
+---
+const { siteTitle } = Astro.props;
+---
+
+<style>
+    #parent {
+        width: 100%;
+
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #title {
+        margin-left: 50px;
+        font-size: 40px;
+    }
+
+    nav {
+        margin-right: 50px;
+    }
+
+    a {
+        text-decoration: none;
+        color: whitesmoke !important;
+    }
+
+    nav a {
+        font-size: 30px;
+    }
+
+    a:hover {
+        color: #c9c9c9 !important;
+    }
+
+    ul {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        width: 350px;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    @media screen and (max-width: 700px) {
+        #title {
+            margin-left: 25px !important;
+        }
+
+        #title a {
+            font-size: 30px !important;
+        }
+
+        nav {
+            margin-right: 25px !important;
+        }
+
+        nav ul {
+            width: 275px !important;
+        }
+
+        nav a {
+            font-size: 25px !important;
+        }
+        @media screen and (max-width: 475px) {
+            #title {
+                margin-left: 25px !important;
+            }
+
+            #title a {
+                font-size: 25px !important;
+            }
+
+            nav {
+                margin-right: 25px !important;
+            }
+
+            nav ul {
+                width: 225px !important;
+            }
+
+            nav a {
+                font-size: 20px !important;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            nav ul {
+                width: 135px !important;
+            }
+        }
+    }
+</style>
+<div id="parent">
+    <div id="title">
+        <h1 style="font-weight: inherit; font-size: inherit;">
+            <a href="/">{siteTitle}</a>
+        </h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li title="Contact me!"><a href="/contact/">Contact</a></li>
+            <li title="My Blogs!"><a href="/blogs/">Blogs</a></li>
+            <li title="My Projects!"><a href="/projects/">Projects</a></li>
+        </ul>
+    </nav>
+</div>

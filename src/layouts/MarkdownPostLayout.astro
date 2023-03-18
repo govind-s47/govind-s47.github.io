@@ -1,0 +1,31 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<style>
+    #title {
+        text-align: center;
+    }
+    #mainBlock {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    @media screen and (max-width: 450px) {
+        #mainBlock {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+</style>
+
+<BaseLayout>
+    <h1 id="title">
+        {frontmatter.title}
+    </h1>
+    <p>{frontmatter.date}</p>
+    <hr style="width: 75%;" />
+    <div id="mainBlock">
+        <slot />
+    </div>
+</BaseLayout>
