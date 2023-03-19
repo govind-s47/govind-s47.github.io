@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 const { frontmatter } = Astro.props;
 ---
 
@@ -20,6 +21,7 @@ const { frontmatter } = Astro.props;
 </style>
 
 <BaseLayout>
+    <Breadcrumb/>
     <h1 id="title">
         {frontmatter.title}
     </h1>
