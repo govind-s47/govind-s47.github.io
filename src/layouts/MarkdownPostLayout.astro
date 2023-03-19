@@ -20,7 +20,7 @@ const { frontmatter } = Astro.props;
     }
 </style>
 
-<BaseLayout>
+<BaseLayout pageTitle={frontmatter.title}>
     <Breadcrumb/>
     <h1 id="title">
         {frontmatter.title}
