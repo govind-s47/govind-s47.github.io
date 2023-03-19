@@ -3,5 +3,4 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://gov1nd-afk.github.io',
-    base: '/gov1nd-afk.github.io',
 });
